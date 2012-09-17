@@ -3,20 +3,20 @@ pygments:         true
 paginate:         4
 
 title:            Black Cube Theme
-url:              http://www.pizn.me
+url:              http://zixiaojindao.github.com
 feed:             /atom.xml
 author:
-    name:         PIZn
-    email:        pizner@gmail.com
-description:      "PIZn's blog theme -- Black Cube Theme 1.0 "
+    name:         whitewater 
+    email:        zixiaojindao@gmail.com
+description:      "whitewater's blog"
 
-about: 			  "I am whitewater.I love all kinds of design, attention to the Internet dynamic, dedicated web front development, learn UI and UED."
+about: 			  "I am whitewater.I love all kinds of beauty" 
 follow:
-    github:       https://github.com/pizn
-    twitter:      http://www.twitter.com/piznlin
-description:      "PIZn's blog theme -- Black Cube Theme 1.0 "
+    github:       https://github.com/zixiaojindao
+    twitter:      http://weibo.com/1896913847/profile 
+description:      "whitewater's blog"
 
 
 style: 			  /css/style.css
-blogName: 		  PIZn
-blogDesc: 		  Phosphorus,Iodine & Zinc.
+blogName: 		  whitewater 
+blogDesc: 		  …œ…∆»ÙÀÆ 
