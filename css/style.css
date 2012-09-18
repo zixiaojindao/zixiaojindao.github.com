@@ -195,6 +195,11 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .entry pre                  { background-color: #303030; border-left: 5px solid #1f1f1f; border-top: 1px solid #1f1f1f; border-right: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f; font: 12px/1.5 Monaco,serif; margin: 10px 0 10px 0px; overflow:  auto; color: #e8e8e8; border-radius: 3px 3px 3px 3px; }
 .entry .code                { margin: 0 3px; padding: 0 3px; background: #a0a0a0; font: 12px Monaco,serif; color: #f8f8f8; border-radius: 2px 2px; }
 
+a.external {
+    background: url("/images/icons.gif") no-repeat scroll right 1px transparent;
+    padding-right: 13px;
+}
+a.external:hover {background-position:right -14px;}
 /** entry special **/
 .entry .title               { margin-bottom: 10px; font-family: Georgia; padding: 0 0; font-size: 26px; font-weight: 400; line-height: 32px; color: #383535; text-align: center; text-shadow: 1px 1px #FFFFFF; text-transform: uppercase; }
 .entry .meta                { text-align: center; color: #888; font-family: "Times New Roman",Times,serif; font-size: 13px; text-indent: 0; font-weight: 600; }
