@@ -1,3 +1,4 @@
+permalink: /:categories/:year/:month/:day/:title/
 markdown:         rdiscount
 pygments:         true
 paginate:         4

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" href="/js/prettify/prettify.css" />
 <section class="content">
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
@@ -39,6 +40,24 @@ layout: default
 			{% include wg-other.html %}
 		</div>
 	</div>
-        
-
 </section>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('pre').addClass('prettyprint linenums'); //添加Google code Hight需要的class
+        loadScript("/js/prettify/prettify.js", function(){prettyPrint();});
+
+        $('.entry a').each(function(index,element){
+            var href = $(this).attr('href');
+            if(href){
+                if(href.indexOf('#') == 0){
+                }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('moecode.net')>-1 ){
+                }else if ($(element).has('img').length){
+                }else{
+                    $(this).attr('target','_blank');
+                    $(this).addClass('external');
+                }
+            }
+        });
+    });
+ </script>
+
