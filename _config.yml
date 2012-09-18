@@ -5,7 +5,7 @@ markdown:         rdiscount
 pygments:         true
 paginate:         4
 
-title:            Black Cube Theme
+title:            whitewater's blog
 url:              http://zixiaojindao.github.com
 feed:             /atom.xml
 author:
