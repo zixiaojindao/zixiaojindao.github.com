@@ -9,7 +9,7 @@ tags: []
 git是一个分布式版本控制工具(DVCS)，不需要服务端软件支持(即使在地铁里也可以正常commit)，Linux内核开发用的版本控制工具就是它。
 常用的SVN属于集中式版本控制工具(CVCS)，需要在服务端开启SVN服务，然后客户端checkout,commit,update。
 更详细的介绍请参考<a href="http://baike.baidu.com/view/1531489.htm" target="_blank">百度百科git</a>
-###2.什么是github
+##2.什么是github
 <a href="https://github.com" target="_blank">GitHub</a>可以托管各种git库，并提供一个web界面，但与其它像 SourceForge或Google Code这样的服务不同，GitHub的独特卖点在于从另外一个项目进行分支的简易性。为一个项目贡献代码非常简单︰首先点击项目站点的fork的按 钮，然后将代码检出并将修改加入到刚才分出的代码库中，最后通过内建的pull request机制向项目负责人申请代码合并。已经有人将GitHub称为代码玩家的MySpace。
 github的<a href="https://pages.github.com" target="_balank">pages</a>功能是给用户提供发布网页的功能，你可以自己提交html文件让github帮你发布，你也可以提交按照固定模板的文档来让github帮你为这些文档生成html。下面是别人总结过的github pages的优缺点:
 github Pages有以下几个优点：
@@ -41,7 +41,7 @@ github pages的服务。github pages本来是用来给托管在github上的项�
 这里主要介绍利用jeklly bootstrap，即官方推荐的方法。
 
 ###4.1 搭建环境(windows 版)
-####4.1.1 安装github for windows
+###4.1.1 安装github for windows
 这一步其实是为了安装git，我最开始安装的是<a href="http://msysgit.github.com/" target="_blank">git for windows</a>。后来我发现有github for windows这个
 好东西，不仅有了git，而且有了和github的接口，快哉，快哉。安装方法很简单，在<a href="http://windows.github.com/" target="_blank">http://windows.github.com</a>
 上下载最新版的release，按部就班的安装就ok。安装完了之后你的桌面就有了GitHub和Git Shell。GitHub是一个图形化的程序，可以图形化的使用git命令和github通信。Git Shell
