@@ -43,14 +43,14 @@ github pages的服务。github pages本来是用来给托管在github上的项�
 ###4.1 搭建环境(windows 版)
 ####4.1.1 安装github for windows
 这一步其实是为了安装git，我最开始安装的是<a href="http://msysgit.github.com/" target="_blank">git for windows</a>。后来我发现有github for windows这个
-好东西，不仅有了git，而且有了和github的接口，快哉，快哉。安装方法很简单，在http://windows.github.com/上下载最新版的release，按部就班的安装就ok。安装完了
-之后你的桌面就有了GitHub和Git Shell。GitHub是一个图形化的程序，可以图形化的使用git命令和github通信。Git Shell一个terminal的git工具，可以使用各种git命令。
-安装完之后你第一步要做的事情就是配置你的github账户，只要运行GitHub，然后输入用户名密码就ok啦。如果跳过这个步骤会使得你在使用Git Shell来push到github上会
-放生ssh key的问题。
+好东西，不仅有了git，而且有了和github的接口，快哉，快哉。安装方法很简单，在<a href="http://windows.github.com/" target="_blank">http://windows.github.com</a>
+上下载最新版的release，按部就班的安装就ok。安装完了之后你的桌面就有了GitHub和Git Shell。GitHub是一个图形化的程序，可以图形化的使用git命令和github通信。Git Shell
+一个terminal的git工具，可以使用各种git命令。安装完之后你第一步要做的事情就是配置你的github账户，只要运行GitHub，然后输入用户名密码就ok啦。如果跳过这个步骤会使得你在使用Git Shell来push项目到github上会发生ssh key的问题。
 
 总结一下：
 
 1.安装<a href="http://windows.github.com/" target="_blank">github for windows</a>
+
 2.运行GitHub,配置github账户。
 
 
