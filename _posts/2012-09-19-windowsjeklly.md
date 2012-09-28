@@ -30,7 +30,7 @@ github Pages有以下几个优点：
 github pages的服务。github pages本来是用来给托管在github上的项目展示说明和文档的,它会在你的项目中产生一个gh-pages的分支，这个分支里按照一定
 的目录和文件格式生成，最最重要的是有一个index.html。github向你展示的就是这个页面，你可以在index中写内容，也可以加链接。链接可以是外部的也可以是
 内部的，所以你可以在分支里添加其他html，然后把这些html的链接添加在index.html中，你整个静态的网站也就形成了。但是如果仅仅是这些还不够，我们写博客
-关注的内容，需要把博主从繁重的html标记中解脱出来，因此有了jellky. jeklly可以使你仅仅按照markdown的语法来书写博文，通过自定义的css样式和页面结构来
+关注的是内容，需要把博主从繁重的html标记中解脱出来，因此有了jellky. jeklly可以使你仅仅按照markdown的语法来书写博文，通过自定义的css样式和页面结构来
 生成最后的html，这样博主在写文章的时候只关注markdown语法的博文就可以了，至于css样式和页面结构，jellky也提供了几个模板供你选择，如果你不满意的话可以
 去把更改模板，如果你还不满意的话可以把别人的在github上的博客fork到自己的版本库中，使用他们的网站主题。
 
@@ -38,7 +38,7 @@ github pages的服务。github pages本来是用来给托管在github上的项�
 这样你就可以通过访问USERNAME.github.com来访问你的博客了。如果你有自己的一级域名的话，可以提供给github,这样就可以直接访问这个以及域名来访问你的博客了。
 
 ###4.一步一步搭建博客
-这里主要介绍利用jeklly bootstrap，即官方推荐的方法。
+这里主要介绍利用jeklly bootstrap，即官方推荐的方法。你需要确保的是在你的github账户中建立一个USERNAME.github.com的版本库。
 
 ###4.1 搭建环境(windows 版)
 ###4.1.1 安装github for windows
@@ -144,3 +144,38 @@ self.content = File.read(File.join(base, name))
 替换为
 
 self.content = File.read(File.join(base, name), :encoding => "utf-8")
+
+###5 书写博文
+Bootstrap中包含了一个rake file，可以使用rake task来产生空的博客，在博客目录下输入:
+<pre>
+rake post title="Hello world!"
+</pre>
+这样就在_post目录中生成了一个空的名为date_Hello_world.md的文件，你可以随意使用markdown的语法来编辑它，加入你的博文正文，注意如果是中文的话，要使用utf-8编码。
+
+###6 发表博文
+如果你已经编辑好了博文，并且已经本地预览满意了，可以push到远端的github上来发布你的博文:
+<pre>
+git add .
+git commit -m "new post"
+git push origin master
+</pre>
+成功执行后，你就可以访问USERNAME.github.com看到你最新的博文了。
+
+###7 配置博客
+主要涉及到配置_config.yml和使用自定义的模板，这一节可以参考
+<a href="http://jekyllbootstrap.com/usage/jekyll-theming.html", target="_blank">http://jekyllbootstrap.com/usage/jekyll-theming.html</a>
+
+<a href="http://jekyllbootstrap.com/usage/blog-configuration.html", target="_blank">http://jekyllbootstrap.com/usage/blog-configuration.html</a>
+
+###8 参考文档
+[1] <a href="http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html", target="_blank">http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html</a>
+
+[2] <a href="http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html", target="_blank">http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html</a>
+
+[3] <a href="http://taberh.me/2011/12/26/use-Jekyll-build-Blog-on-Github.html", target="_blank">http://taberh.me/2011/12/26/use-Jekyll-build-Blog-on-Github.html</a>
+
+[4] <a href="http://mookrs.com/2012/04/hello-jekyll.html", target="_blank">http://mookrs.com/2012/04/hello-jekyll.html</a>
+
+[5] <a href="http://beiyuu.com/github-pages/", target="_blank">http://beiyuu.com/github-pages/</a>
+
+[6] <a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html", target="_blank">http://jekyllbootstrap.com/usage/jekyll-quick-start.html</a>
