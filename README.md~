@@ -8,4 +8,6 @@
 * support :  index, archives, contact
 
 ###Other
-如果你要fork这个项目，请删除google分析验证文件google203f5dc43bec0ecf.html。
+
+这是一款黑色主题，目前支持 3 个页面，分别是 index.html, archives.html,
+contact.html。
