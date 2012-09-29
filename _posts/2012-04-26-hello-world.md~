@@ -47,7 +47,7 @@ key: pizn theme, Black Cube
 
 <pre><code>$ git config --global user.name "你的名字"
 $ git config --global user.token 0123456789your123456789token
-</code></pre
+</code></pre>
 
 ###"IMG"标签：图片提供 3 种样式，分别是<code class="code">img-center</code>, <code class="code">img-right</code>, <code class="code">img-left</code>
 <img src="/images/psb.jpg" class="img-center" width: 400px; alt="thumb" >

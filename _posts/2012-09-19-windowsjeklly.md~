@@ -2,7 +2,8 @@
 layout: post
 title: "windows下搭建jeklly博客"
 description: "jeklly作为博客引擎是在是程序员们的一大福音，github的pages功能对于jeklly的完美支持可以让你轻松拥有自己域名的博客，这篇文章主要介绍在windows搭建jeklly博客的步骤。"
-category: 
+categories: 
+- jeklly
 tags: []
 ---
 ###1.什么是git

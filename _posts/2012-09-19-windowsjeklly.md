@@ -2,8 +2,11 @@
 layout: post
 title: "windows下搭建jeklly博客"
 description: "jeklly作为博客引擎是在是程序员们的一大福音，github的pages功能对于jeklly的完美支持可以让你轻松拥有自己域名的博客，这篇文章主要介绍在windows搭建jeklly博客的步骤。"
-category: 
-tags: []
+categories: 
+- Blogging
+tags: 
+- jeklly
+- windows
 ---
 ###1.什么是git
 git是一个分布式版本控制工具(DVCS)，不需要服务端软件支持(即使在地铁里也可以正常commit)，Linux内核开发用的版本控制工具就是它。

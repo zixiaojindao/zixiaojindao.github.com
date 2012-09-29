@@ -235,3 +235,13 @@ a.external:hover {background-position:right -14px;}
 .article-box .title a:hover { color: #fefefe; text-decoration: none; }
 .article-box .date          { font-family: Georgia; color: #888; font-style: italic; }
 .article-box .desc          { line-height: 20px; color: #e8e8e8; font-family: Georgia; }
+
+/*---------------------------------------------
+			tag and cat
+----------------------------------------------*/
+#tag_cloud{margin-bottom: 1em;}
+#tag_cloud a:hover{color:#333333 !important;text-decoration:none;}
+.listing-item,.listing-seperator{list-style-type:none;}
+.listing-item a{padding:.2em 1em;}
+.listing-item time{color:#999999;}
+.listing-seperator{font-weight:bold;}
