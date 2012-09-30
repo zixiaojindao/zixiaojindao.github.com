@@ -29,46 +29,34 @@ HostName:你网站的名称(host name)。
 
 2.在apache的安装目录中找到conf/httpd.conf,打开它修改
 
-\<Directory "path2yourwebroot">
-\</Directory>
+	<Directory "path2yourwebroot">
+	</Directory>
 
 中的path2yourwebroot为WebRoot(WebRoot指的是你的WebRoot所在的目录，而不是WebRoot这个单词！)
 
 修改'DirectoryIndex'为你网站的默认文档，也就是访问http://HostName时要访问的页面。
 
 在最后面添加
-<pre>
-ProxyPass /images !
-ProxyPass /css !
-ProxyPass /js !
-ProxyPass /WebSiteName http://localhost:8080/WebSiteName
-</pre>
+	ProxyPass /images !
+	ProxyPass /css !
+	ProxyPass /js !
+	ProxyPass /WebSiteName http://localhost:8080/WebSiteName
 
 ###3.配置tomcat(7.0及以上)
 1.修改tomcat目录中的conf/server.xml, 找到'protocal="HTTP/1.1"'对应的一行，修改为
-<pre><code>
-<Connector port="8080" protocol="HTTP/1.1"
-               connectionTimeout="20000"
-               redirectPort="8443" proxyPort="80" proxyName=HostName/>
-</code></pre>
-<pre><code><div class="footer">
-    &copy; 2004 Foo Corporation
-</div>
-</code></pre>
+	<Connector port="8080" protocol="HTTP/1.1"
+	connectionTimeout="20000"
+	redirectPort="8443" proxyPort="80" proxyName=HostName/>
 
 再次注意HostName是你的HostName，而不是单词HostName。
 2.如果你原来的文档是放在tomcat默认的webapp中，最好的迁移方法是，开辟一个新的WebRoot(不在tomcat目录及子目录)。
 而不是让WebRoot指向tomcat的webapp目录，这样的话如果你建一个php的网站还要放在tomcat下，岂不是非常混乱。如果你
 按照我的说法，新开辟了WebRoot的话，那就需要在修改server.xml中的appbase为WebRoot，以及在<Host></Host>中加入
-<pre>
-<Context path="" docBase=WebRoot reloadable="true" />
-</pre>
+	<Context path="" docBase=WebRoot reloadable="true" />
 
 ###4.安装配置svn
 1.下载安装<a href="http://subversion.tigris.org/files/documents/15/39559/svn-1.4.5-setup.exe", target="_blank">svn-1.4.5.exe</a>
 
 2.新建一个版本库名字是MyProject, 使用svnadmin工具, cmd中输入
-<pre>
-svnadmin create E:\svnroot\MyProject
-</pre>
+	svnadmin create E:\svnroot\MyProject
 这样在E:\svnroot下新建了MyProject的目录，这个目录已经有了svn的基本文件结构。
