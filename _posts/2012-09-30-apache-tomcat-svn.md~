@@ -51,6 +51,11 @@ ProxyPass /WebSiteName http://localhost:8080/WebSiteName
                connectionTimeout="20000"
                redirectPort="8443" proxyPort="80" proxyName=HostName/>
 </code></pre>
+<pre><code><div class="footer">
+    &copy; 2004 Foo Corporation
+</div>
+</code></pre>
+
 再次注意HostName是你的HostName，而不是单词HostName。
 2.如果你原来的文档是放在tomcat默认的webapp中，最好的迁移方法是，开辟一个新的WebRoot(不在tomcat目录及子目录)。
 而不是让WebRoot指向tomcat的webapp目录，这样的话如果你建一个php的网站还要放在tomcat下，岂不是非常混乱。如果你
