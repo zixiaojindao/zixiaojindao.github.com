@@ -34,7 +34,7 @@ HostName:你网站的名称(host name)。
 
 中的path2yourwebroot为WebRoot(WebRoot指的是你的WebRoot所在的目录，而不是WebRoot这个单词！)
 
-修改'DirectoryIndex'为你网站的默认文档，也就是访问http://HostName时要访问的页面。
+修改<code class="code">DirectoryIndex</code>为你网站的默认文档，也就是访问http://HostName时要访问的页面。
 
 在最后面添加
 	ProxyPass /images !
@@ -43,7 +43,7 @@ HostName:你网站的名称(host name)。
 	ProxyPass /WebSiteName http://localhost:8080/WebSiteName
 
 ###3.配置tomcat(7.0及以上)
-1.修改tomcat目录中的conf/server.xml, 找到'protocal="HTTP/1.1"'对应的一行，修改为
+1.修改tomcat目录中的conf/server.xml, 找到<code class="code">protocal="HTTP/1.1"</code>对应的一行，修改为
 	<Connector port="8080" protocol="HTTP/1.1"
 	connectionTimeout="20000"
 	redirectPort="8443" proxyPort="80" proxyName=HostName/>
