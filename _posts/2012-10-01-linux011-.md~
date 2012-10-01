@@ -1,0 +1,74 @@
+---
+layout: post
+title: "linux0.11 内核编译启动环境"
+description: "linux0.11版是初学者研究linux内核代码的比较适中的版本，代码量较小，但却具备了linux的基本功能和结构，并且有赵炯博士编写的linux0.11内核代码注释参考。"
+categories: 
+- Linux
+tags:
+- linux0.11
+- 内核编译
+---
+linux0.11内核的编译和启动主要设计到linux内核编译和PC模拟器的使用，编译部分主要涉及到gcc编译器的发展而引发的原始代码无法正常编译需要稍作修改。我这里已经修改好一个gcc4.1版的linux0.11的包，可以直接使用。PC模拟器选用bochs，主要涉及到编译调试版的bochs和非调试版的bochs。我所使用的操作系统是ubuntu10.04。
+
+###1.安装build essential和bin86
+	$sudo apt-get install build-essential
+	$sudo apt-get install bin86
+build essential是一系列的开发包，bin86是编译linux boot loader需要的as86编译器。
+
+###2.确认gcc版本
+我们需要确认安装的gcc是4.1版本的,否则无法编译运行。
+	$gcc -v
+	...
+	gcc version 4.1.3 20080704 (prerelease) (Ubuntu 4.1.2-27ubuntu1)
+如果不是gcc4.1请执行：
+	$sudo apt-get remove gcc
+	$sudo apt-get install gcc-4.1 g++-4.1
+	$sudo ln -snf /usr/bin/gcc-4.1 /usr/bin/gcc
+	$sudo ln -snf /usr/bin/g++-4.1 /usr/bin/g++
+	$sudo ln -snf /usr/bin/cpp-4.1 /usr/bin/cpp
+卸载gcc，安装gcc4.1，创建gcc, g++, cpp硬链接到/usr/bin
+
+###3.下载[linux-0.11-gcc41-dbg.tar.gz](http://pan.baidu.com/share/link?shareid=71471&uk=3641527518),解压到linux,make
+	$make
+	...
+	tools/build boot/bootsect boot/setup tools/kernel  > Image
+	Root device is (3, 1)
+	Boot sector 512 bytes.
+	Setup is 312 bytes.
+	System is 121412 bytes.
+	rm tools/kernel -f
+	sync
+如果出现以上信息，恭喜你已经在当前目录下编译出来Image(linux内核映像)。细心的你会发现当前目录下还包含了bochsrc.bxrc, hdc-0.11-new.img, run, run-dbg。其中bochsrc.bxrc是bochs的配置文件，指明了启动盘，bios，根文件系统等启动linux必须的条件;hdc-0.11-new.img是启动linux0.11的根文件系统；run, run-dbg是启动bochs(非调试版的bochs), bochs-dbg(调试版的bochs)的脚本。
+
+###4.安装bochs
+4.1安装依赖库
+	$sudo apt-get install xorg-dev
+	$sudo apt-get install bison
+	$sudo apt-get install libgtk2.0-dev
+
+4.2下载bochs源码，直接apt-get获取bochs将只有非调试功能。
+	$wget http://nchc.dl.sourceforge.net/project/bochs/bochs/2.5.1/bochs-2.5.1.tar.gz
+
+4.3编译安装调试版的bochs
+	$cd bochs-2.5.1
+	$./configure --enable-debugger --enable-disasm
+	$make
+	$sudo make install
+	$sudo mv /usr/local/bin/bochs /usr/local/bin/bochsdbg
+因为编译出来的bochs可执行文件名字都是bochs，所以最后一条命令把调试版的bochs更名为bochsdbg。[这里](http://bochs.sourceforge.net/doc/docbook/user/internal-debugger.html)有bochs调试命令的说明文档。
+
+4.4编译安装非调试版的bochs
+	$cd bochs-2.5.1
+	$make clean
+	$./configure
+	$make
+	$sudo make install
+[这里](http://bochs.sourceforge.net/doc/docbook/user/index.html)有bochs的说明文档。
+
+###5.启动linux
+进入linux目录，
+	$./run
+如果出现下面的画面，恭喜你启动成功！
+![bochs-start-linux](/attach/bochs.JPG)
+想要调试内核，使用
+	$./run-dbg
