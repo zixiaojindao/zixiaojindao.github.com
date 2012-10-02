@@ -18,7 +18,8 @@
 .dec{color:purple;}
 pre.prettyprint {border:0px solid #888;}
 ol.linenums{margin-top:0;margin-bottom:0;}
-.prettyprint{background:#87205e;}
+ol.linenums li{color: #bebec5;}
+.prettyprint{background:#000;}
 @media print {
     .str{color:#060;}
     .kwd{color:#006;font-weight:bold;}
