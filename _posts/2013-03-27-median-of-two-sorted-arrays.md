@@ -9,7 +9,7 @@ tags:
 - interview
 ---
 ###1. 题目描述
-这道题目是[leetcode](leetcode.com)上的一道经典题目，英文的题目见上面的描述。中文意思为有两个排好(升)序数组A和B，长度分别为m和n，请在O(log(m+n))的时间复杂度内找出两个数组合并之后的中位数。这里需要强调一下题目中要求的中位数在数组个数为偶数的情况下，需要返回中间两个数字的平均值。举个例子:
+这道题目是[leetcode](http://leetcode.com/onlinejudge#question_4)上的一道经典题目，英文的题目见上面的描述。中文意思为有两个排好(升)序数组A和B，长度分别为m和n，请在O(log(m+n))的时间复杂度内找出两个数组合并之后的中位数。这里需要强调一下题目中要求的中位数在数组个数为偶数的情况下，需要返回中间两个数字的平均值。举个例子:
 
 A[] = {1, 2, 3, 5}, m = 4
 
@@ -49,10 +49,12 @@ B[] = {4, 6, 7, 8}, n = 4
 					return a[i];
 				else
 				{
-					if(i > 0)
+					if(i > 0 && j >= 0)
 						return (a[i] + max(a[i - 1], b[j])) / 2.0;
-					else
+					else if(i == 0)
 						return (a[i] + b[j]) / 2.0;
+					else
+						return (a[i] + a[i-1]) / 2.0;
 				}
 			}
 		}
@@ -62,7 +64,6 @@ B[] = {4, 6, 7, 8}, n = 4
 			return FindMedianInternal(A, B, m, n, max(0, (m + n) / 2 - n), min(m - 1, (m + n) / 2));
 		}
 	};
-如果你把上面的代码直接放在leetcode中run会发现有一些测试用例没有通过，我仔细检查了下，发现leetcode上同一个测试用例的output竟然和我本地的output不一样！比如对于[], [2,3]这组测试用例本地的输出为2.5，而leetcode上竟然为10.0！如果有人知道为什么请一定留言告诉我。
 
 如果你觉得看了上面的讲解就可以直接得出上面的code，那你一定是没有弄懂它的所有细节。代码的接口函数findMedianSortedArrays(int A[], int m, int B[], int n)只是一个helper函数，里面调用了真正的计算函数double FindMedianInternal(int A[], int B[], int m, int n, int left, int right), 这个函数维持的循环不变式是median要么在A[left...right]中，要么在B中。首先看初始调用的时候循环不变式是否成立：
 
