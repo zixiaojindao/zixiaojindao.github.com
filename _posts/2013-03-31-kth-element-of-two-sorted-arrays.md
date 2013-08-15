@@ -23,7 +23,7 @@ B[] = {2, 4, 6, 8}, n = 4
 		double FindKthInternal(int a[], int b[], int na, int nb, int left, int right, int k)
 		{
 			if(left > right)
-				return FindKthInternal(b, a, nb, na, max(0, k - 1 - na), min(nb, k - 1), k);
+				return FindKthInternal(b, a, nb, na, max(0, k - 1 - na), min(nb - 1, k - 1), k);
 			int i = (left + right) / 2;
 			int j = k - 1 - i - 1;
 			if(j >= 0 && j < nb && a[i] < b[j])
