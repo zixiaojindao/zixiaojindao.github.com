@@ -26,7 +26,7 @@ a[] = {1,3,7,8,9}
             int mid = (left + right) / 2;
             if(a[mid] == value)
               return mid;
-            else if(a[mid] > value)
+            else if(a[mid] < value)
               left = mid + 1;
             else
               right = mid -1;
