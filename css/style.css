@@ -30,8 +30,8 @@ ol,ul                       { list-style:none; }
 caption,th                  { text-align:left; }
 h1,h2,h3,h4,h5,h6           { font-size:100%; font-weight:500; }
 q:before,q:after            { content:''; }
-sup                         { vertical-align:text-top; }
-sub                         { vertical-align:text-bottom; }
+sup                         { vertical-align:text-bottom; }
+sub                         { vertical-align:text-top; }
 a:hover                     { text-decoration:underline; }
 ins,a                       { text-decoration:none; }
 
