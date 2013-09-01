@@ -5,7 +5,7 @@ description: "二分搜索是经典的在有序数组中log(n)时间复杂度的
 categories: 
 - Algorithms
 tags:
-- BinarySearch
+- Binary Search
 ---
 ###1. 二分搜索问题(binary search)
 给定一个有序数组和一个数字，请找出该数字在数组中出现的位置，如果没有出现返回-1。

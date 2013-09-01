@@ -5,7 +5,7 @@ description: 基于简单而又有质感的理念，<a href="http://www.pizn.me"
 categories:
 - Blogging
 tags:
-- jeklly
+- jekyll
 - 标签使用方法
 key: pizn theme, Black Cube
 ---
