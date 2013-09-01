@@ -29,7 +29,7 @@ LCS有O(n<sup>2</sup>)的动态规划解法，故而可以解之。
 如果把f(i)定义为以S[i]结尾的LIS长度,由于LIS(S)必定以S[0],S[1]...S[size(S)-1]中的某个元素结尾，所以LIS(S)=max(f(0),f(1),...,f(n-1))。
 递归方程为:
 
-<div align="center">f(i)=max(f(j) + 1) for all j&lt;i&&S[i]&lt;S[j]</div>
+<div align="center">f(i)=max(f(j) + 1) for all j&lt;i&&S[j]&lt;S[i]</div>
 
 算法如下:
     int LIS(int a[], int size)
@@ -55,7 +55,7 @@ LCS有O(n<sup>2</sup>)的动态规划解法，故而可以解之。
 很容易看出，该算法的时间复杂度为O(n<sup>2</sup>)
 ###3. O(nlog(n))的算法
 令S<sub>i</sub>={S[0],S[1],...S[i]},R<sub>i,j</sub>为S<sub>i</sub>中长度
-为j的序列集合。令m<sub>i,j</sub>表示R<sub>i,j</sub>中每个序列最后一个元素
+为j的上升子序列集合。令m<sub>i,j</sub>表示R<sub>i,j</sub>中每个序列最后一个元素
 组成的集合中最小的那个元素。
 
 观察一:
