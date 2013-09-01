@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "windows下搭建jeklly博客"
-description: "jeklly作为博客引擎是在是程序员们的一大福音，github的pages功能对于jeklly的完美支持可以让你轻松拥有自己域名的博客，这篇文章主要介绍在windows搭建jeklly博客的步骤。"
+title: "windows下搭建jekyll博客"
+description: "jekyll作为博客引擎是在是程序员们的一大福音，github的pages功能对于jekyll的完美支持可以让你轻松拥有自己域名的博客，这篇文章主要介绍在windows搭建jekyll博客的步骤。"
 categories: 
 - Blogging
 tags: 
-- jeklly
+- jekyll
 - windows
 ---
 ###1.什么是git
@@ -33,7 +33,7 @@ github Pages有以下几个优点：
 github pages的服务。github pages本来是用来给托管在github上的项目展示说明和文档的,它会在你的项目中产生一个gh-pages的分支，这个分支里按照一定
 的目录和文件格式生成，最最重要的是有一个index.html。github向你展示的就是这个页面，你可以在index中写内容，也可以加链接。链接可以是外部的也可以是
 内部的，所以你可以在分支里添加其他html，然后把这些html的链接添加在index.html中，你整个静态的网站也就形成了。但是如果仅仅是这些还不够，我们写博客
-关注的是内容，需要把博主从繁重的html标记中解脱出来，因此有了jellky. jeklly可以使你仅仅按照markdown的语法来书写博文，通过自定义的css样式和页面结构来
+关注的是内容，需要把博主从繁重的html标记中解脱出来，因此有了jellky. jekyll可以使你仅仅按照markdown的语法来书写博文，通过自定义的css样式和页面结构来
 生成最后的html，这样博主在写文章的时候只关注markdown语法的博文就可以了，至于css样式和页面结构，jellky也提供了几个模板供你选择，如果你不满意的话可以
 去把更改模板，如果你还不满意的话可以把别人的在github上的博客fork到自己的版本库中，使用他们的网站主题。
 
@@ -41,7 +41,7 @@ github pages的服务。github pages本来是用来给托管在github上的项�
 这样你就可以通过访问USERNAME.github.com来访问你的博客了。如果你有自己的一级域名的话，可以提供给github,这样就可以直接访问这个以及域名来访问你的博客了。
 
 ###4.一步一步搭建博客
-这里主要介绍利用jeklly bootstrap，即官方推荐的方法。你需要确保的是在你的github账户中建立一个USERNAME.github.com的版本库。
+这里主要介绍利用jekyll bootstrap，即官方推荐的方法。你需要确保的是在你的github账户中建立一个USERNAME.github.com的版本库。
 
 ###4.1 搭建环境(windows 版)
 ###4.1.1 安装github for windows
@@ -82,7 +82,7 @@ ruby dk.rb init
 ---
 - C:/Ruby193
 </pre>
-3.继续敲入如下命令安装jeklly
+3.继续敲入如下命令安装jekyll
 <pre>
 ruby dk.rb install
 gem install jekyll
@@ -128,9 +128,9 @@ other files/folders
 
 Shell 中继续输入
 <pre>
-jeklly --server
+jekyll --server
 </pre>
-这样jeklly在本地生成了你的博客网站，你可以在浏览器中访问:http://localhost:4000来预览你的博客。这个功能可以方便博主预览完了之后再一起push到github上，
+这样jekyll在本地生成了你的博客网站，你可以在浏览器中访问:http://localhost:4000来预览你的博客。这个功能可以方便博主预览完了之后再一起push到github上，
 而不用每次修改都要push到远端的github来预览。
 
 需要说明的是，github产生pages的时候只有在第一次是非即时的，需要大概几分钟的时间，所以你在过一段时间之后，就可以通过浏览器访问http://USERNAME.github.com来

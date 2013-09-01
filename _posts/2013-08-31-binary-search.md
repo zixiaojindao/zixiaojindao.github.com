@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BinarySearch"
+title: "Binary Search"
 description: "二分搜索是经典的在有序数组中log(n)时间复杂度的搜索算法。本文回顾了经典二分搜索算法，并增加了查找最左边，和最右边位置的算法"
 categories: 
 - Algorithms

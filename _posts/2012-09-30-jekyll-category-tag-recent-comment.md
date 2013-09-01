@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "为jeklly博客添加分类，标签和评论"
-description: "Jeklly bootstrap中自带了分类，标签，评论，但是很多人选择了使用自己的主题或者fork别人的主题，那么就很有可能没有这三项内容，这篇文章讲解为jeklly博客添加
+title: "为jekyll博客添加分类，标签和评论"
+description: "Jekyll bootstrap中自带了分类，标签，评论，但是很多人选择了使用自己的主题或者fork别人的主题，那么就很有可能没有这三项内容，这篇文章讲解为jekyll博客添加
 分类，标签和评论的方法。"
 categories: 
 - Blogging
@@ -48,11 +48,11 @@ tags:
 ###3 添加评论
 添加评论的原理就是在你的post的模板中加入disqus的通用代码，具体方法如下：
 
-1. 注册<a href="http://disqus.com/", target="_blank">disqus</a> 
+1.注册<a href="http://disqus.com/", target="_blank">disqus</a> 
 
-2. 注册你的博客域名，生成你的短域名，使用universe code，把相应的代码粘贴到你post使用的模板中。
+2.注册你的博客域名，生成你的短域名，使用universe code，把相应的代码粘贴到你post使用的模板中。
 
-3. 添加最新评论到首页，在disqus中点击admin->tools->recent comments, 把相应的代码粘贴到index.md, index.html中，并指定合适的位置，一般
+3.添加最新评论到首页，在disqus中点击admin->tools->recent comments, 把相应的代码粘贴到index.md, index.html中，并指定合适的位置，一般
 在右侧。
 
 ###4 总结
